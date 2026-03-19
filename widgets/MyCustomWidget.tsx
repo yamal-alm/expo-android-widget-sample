@@ -2,6 +2,7 @@
 import { StyleSheet, View } from 'react-native';
 import { FlexWidget, TextWidget, WidgetPreview } from 'react-native-android-widget';
 
+
 export function MyCustomWidget() {
   return (
     <FlexWidget
@@ -17,6 +18,14 @@ export function MyCustomWidget() {
     >
       <TextWidget
         text="This is a custom widget"
+        style={{
+          fontSize: 32,
+          fontFamily: 'Inter',
+          color: '#000000',
+        }}
+      />
+      <TextWidget
+        text={`This is a random text on each update: ${Math.floor(Math.random() * 360)}`}
         style={{
           fontSize: 32,
           fontFamily: 'Inter',
@@ -43,7 +52,26 @@ export function MyCustomWidget() {
           }}
         />
       </FlexWidget>
-      
+      <FlexWidget
+        clickAction="update_widget"
+        accessibilityLabel="Update widget"
+        style={{
+          marginTop: 12,
+          paddingHorizontal: 24,
+          paddingVertical: 8,
+          backgroundColor: '#007AFF',
+          borderRadius: 8,
+        }}
+      >
+        <TextWidget
+          text="This button will update the widget"
+          style={{
+            fontSize: 16,
+            fontFamily: 'Inter',
+            color: '#ffffff',
+          }}
+        />
+      </FlexWidget>
     </FlexWidget>
   );
 }
