@@ -52,7 +52,7 @@
               "targetCellWidth": 5,
               "targetCellHeight": 2,
               "description": "This is my first widget", 
-              "previewImage": "./assets/widget-preview/hello.png",
+              "previewImage": "./assets/widget-preview/preview.png",
               "updatePeriodMillis": 1800000
             }
           ]

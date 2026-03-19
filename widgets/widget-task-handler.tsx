@@ -18,7 +18,8 @@ export async function widgetTaskHandler(props: WidgetTaskHandlerProps) {
       break;
 
     case 'WIDGET_UPDATE':
-      // Not needed for now
+      console.log('WIDGET_UPDATE event triggered');
+      props.renderWidget(<Widget />);
       break;
 
     case 'WIDGET_RESIZED':
@@ -30,10 +31,8 @@ export async function widgetTaskHandler(props: WidgetTaskHandlerProps) {
       break;
 
     case 'WIDGET_CLICK':
-      if (props.clickAction === 'invoke_js_code') {
-        console.log('invoke_js_code action triggered', props.widgetInfo);
-      } else if (props.clickAction === 'update_widget') {
-        console.log('update_widget action triggered', props.widgetInfo);
+      if (props.clickAction === 'update_widget') {
+        console.log('update_widget action triggered');
         props.renderWidget(<Widget />);
       }
       break;

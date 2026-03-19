@@ -17,41 +17,13 @@ export function MyCustomWidget() {
       accessibilityLabel="Custom widget"
     >
       <TextWidget
-        text="This is a custom widget"
-        style={{
-          fontSize: 32,
-          fontFamily: 'Inter',
-          color: '#000000',
-        }}
-      />
-      <TextWidget
         text={`This is a random text on each update: ${Math.floor(Math.random() * 360)}`}
         style={{
-          fontSize: 32,
+          fontSize: 24,
           fontFamily: 'Inter',
           color: '#000000',
         }}
       />
-      <FlexWidget
-        clickAction="invoke_js_code"
-        accessibilityLabel="Invoke JS code"
-        style={{
-          marginTop: 12,
-          paddingHorizontal: 24,
-          paddingVertical: 8,
-          backgroundColor: '#007AFF',
-          borderRadius: 8,
-        }}
-      >
-        <TextWidget
-          text="This button will execute JS code"
-          style={{
-            fontSize: 16,
-            fontFamily: 'Inter',
-            color: '#ffffff',
-          }}
-        />
-      </FlexWidget>
       <FlexWidget
         clickAction="update_widget"
         accessibilityLabel="Update widget"
