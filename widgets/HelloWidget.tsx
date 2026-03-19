@@ -35,7 +35,7 @@ export function HelloWidget() {
         }}
       >
         <TextWidget
-          text="Update"
+          text="This button will execute JS code"
           style={{
             fontSize: 16,
             fontFamily: 'Inter',
