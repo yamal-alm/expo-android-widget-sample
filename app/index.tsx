@@ -1,20 +1,20 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { HelloWidgetPreviewScreen } from '@/widgets/HelloWidget';
+import { MyCustomWidgetPreviewScreen } from '@/widgets/MyCustomWidget';
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.info}>
-        <Text style={styles.title}>Hello Widget</Text>
+        <Text style={styles.title}>Custom Widget</Text>
         <Text style={styles.subtitle}>
           This is a preview of how the widget will look on your home screen.
         </Text>
         <Text style={styles.stepsTitle}>How to add it to your home screen:</Text>
         <Text style={styles.step}>1. Long-press an empty area of your home screen.</Text>
         <Text style={styles.step}>2. Tap <Text style={styles.bold}>Widgets</Text>.</Text>
-        <Text style={styles.step}>3. Find <Text style={styles.bold}>My Hello Widget</Text> and drag it onto your home screen.</Text>
+        <Text style={styles.step}>3. Find <Text style={styles.bold}>My Custom Widget</Text> and drag it onto your home screen.</Text>
       </View>
-      <HelloWidgetPreviewScreen />
+      <MyCustomWidgetPreviewScreen />
     </View>
   );
 }

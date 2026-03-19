@@ -45,8 +45,8 @@
         {
           "widgets": [
             {
-              "name": "Hello",
-              "label": "My Hello Widget",
+              "name": "MyCustomWidget",
+              "label": "My Custom Widget",
               "minWidth": "320dp",
               "minHeight": "120dp",
               "targetCellWidth": 5,

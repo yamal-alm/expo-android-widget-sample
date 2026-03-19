@@ -1,9 +1,9 @@
 import type { WidgetTaskHandlerProps } from 'react-native-android-widget';
-import { HelloWidget } from './HelloWidget';
+import { MyCustomWidget } from './MyCustomWidget';
 
 const nameToWidget = {
-  // Hello will be the **name** with which we will reference our widget.
-  Hello: HelloWidget,
+  // MyCustomWidget will be the **name** with which we will reference our widget.
+  MyCustomWidget: MyCustomWidget,
 };
 
 export async function widgetTaskHandler(props: WidgetTaskHandlerProps) {
@@ -14,6 +14,7 @@ export async function widgetTaskHandler(props: WidgetTaskHandlerProps) {
   switch (props.widgetAction) {
     case 'WIDGET_ADDED':
       props.renderWidget(<Widget />);
+      console.log('Widget added', props.widgetInfo);
       break;
 
     case 'WIDGET_UPDATE':
@@ -29,8 +30,8 @@ export async function widgetTaskHandler(props: WidgetTaskHandlerProps) {
       break;
 
     case 'WIDGET_CLICK':
-      if (props.clickAction === 'update_widget') {
-        console.log('update_widget action triggered', props.widgetInfo);
+      if (props.clickAction === 'invoke_js_code') {
+        console.log('invoke_js_code action triggered', props.widgetInfo);
       }
       break;
 

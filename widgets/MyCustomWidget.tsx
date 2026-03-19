@@ -2,7 +2,7 @@
 import { StyleSheet, View } from 'react-native';
 import { FlexWidget, TextWidget, WidgetPreview } from 'react-native-android-widget';
 
-export function HelloWidget() {
+export function MyCustomWidget() {
   return (
     <FlexWidget
       style={{
@@ -13,10 +13,10 @@ export function HelloWidget() {
         backgroundColor: '#ffffff',
         borderRadius: 16,
       }}
-      accessibilityLabel="Hello world widget"
+      accessibilityLabel="Custom widget"
     >
       <TextWidget
-        text="Hello"
+        text="This is a custom widget"
         style={{
           fontSize: 32,
           fontFamily: 'Inter',
@@ -24,8 +24,8 @@ export function HelloWidget() {
         }}
       />
       <FlexWidget
-        clickAction="update_widget"
-        accessibilityLabel="Update widget"
+        clickAction="invoke_js_code"
+        accessibilityLabel="Invoke JS code"
         style={{
           marginTop: 12,
           paddingHorizontal: 24,
@@ -43,15 +43,16 @@ export function HelloWidget() {
           }}
         />
       </FlexWidget>
+      
     </FlexWidget>
   );
 }
 
-export function HelloWidgetPreviewScreen() {
+export function MyCustomWidgetPreviewScreen() {
   return (
     <View style={styles.container}>
       <WidgetPreview
-        renderWidget={() => <HelloWidget />}
+        renderWidget={() => <MyCustomWidget />}
         width={320}
         height={200}
       />

@@ -17,7 +17,7 @@ expo-android-widget-sample/
 │   ├── _layout.tsx             # Root layout (bare Stack navigator)
 │   └── index.tsx               # Single screen — renders the widget preview
 ├── widgets/
-│   ├── HelloWidget.tsx         # Widget UI component + preview screen
+│   ├── MyCustomWidget.tsx         # Widget UI component + preview screen
 │   └── widget-task-handler.tsx # Widget lifecycle event handler
 ├── scripts/                    # Utility scripts
 ├── assets/                     # Icons, images, widget preview images
@@ -72,6 +72,18 @@ Then press `a` to open on an Android emulator or connected device.
 1. Long-press an empty area of your Android home screen.
 2. Tap **Widgets**.
 3. Find your widget and drag it onto the home screen.
+
+## Widget Event Handling
+
+All widget lifecycle events are handled in `widgets/widget-task-handler.tsx`. The handler receives a `widgetAction` and dispatches accordingly.
+
+### Click actions
+
+Click actions are string identifiers set via `clickAction` on any `FlexWidget` element. The handler currently recognises two:
+
+- **`invoke_js_code`** — intended to run arbitrary JS logic from a widget tap.
+
+To add a new click action, set `clickAction="your_action"` on a `FlexWidget` in `MyCustomWidget.tsx` and add a matching branch inside the `WIDGET_CLICK` case in `widget-task-handler.tsx`.
 
 ## Available Scripts
 
