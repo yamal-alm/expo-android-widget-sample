@@ -9,6 +9,10 @@ A sample [Expo](https://expo.dev) / React Native app demonstrating how to build 
 - 🔔 Widget lifecycle handling (add, update, resize, delete, click)
 - ⚡ React Native New Architecture enabled
 
+## Demo
+
+https://github.com/user-attachments/assets/dd9b58b4-4d8a-4dfc-8e9a-188e2f514019
+
 ## Project Structure
 
 ```
@@ -79,9 +83,9 @@ All widget lifecycle events are handled in `widgets/widget-task-handler.tsx`. Th
 
 ### Click actions
 
-Click actions are string identifiers set via `clickAction` on any `FlexWidget` element. The handler currently recognises two:
+Click actions are string identifiers set via `clickAction` on any `FlexWidget` element. The handler currently recognises:
 
-- **`invoke_js_code`** — intended to run arbitrary JS logic from a widget tap.
+- **`update_widget`**
 
 To add a new click action, set `clickAction="your_action"` on a `FlexWidget` in `MyCustomWidget.tsx` and add a matching branch inside the `WIDGET_CLICK` case in `widget-task-handler.tsx`.
 
